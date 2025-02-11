@@ -2,12 +2,12 @@ import { limparReservas } from './reservaService.js'
 
 async function sistema(){
   const agora = new Date()
-  const horas = agora.getHours()
+  const horas = agora.getHours() - 3
 
   if(horas >= 17 || horas < 9){
     try {
       await limparReservas()
-      return false
+      return true
     } catch (error) {
       console.error('Erro ao limpar reservas:', error)
     }
