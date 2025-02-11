@@ -1,0 +1,18 @@
+# Diretórios e arquivos desnecessários
+node_modules/
+dist/
+build/
+
+# Arquivos de configuração locais
+.env
+
+# Arquivos de log
+npm-debug.log
+yarn-error.log
+
+# Cobertura de testes
+coverage/
+
+# Sistema de arquivos do editor de código (ex: VSCode)
+.vscode/
+.idea/
