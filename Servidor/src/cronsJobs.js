@@ -5,7 +5,7 @@ async function sistema(){
   const horas = agora.getHours() - 3
   const check = false
 
-  if(horas >= 17 || horas < 13){
+  if(horas >= 17 || horas < 14){
     try {
       if(!check){
         await limparReservas()
