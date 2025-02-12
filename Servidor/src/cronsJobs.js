@@ -7,16 +7,12 @@ async function sistema(){
 
   if(horas >= 17 || horas < 14){
     try {
-      if(!check){
-        await limparReservas()
-      }
-      check = true
       return true
     } catch (error) {
       console.error('Erro ao limpar reservas:', error)
     }
   }else{
-    check = false
+    await limparReservas()
     return false
   }
 }
