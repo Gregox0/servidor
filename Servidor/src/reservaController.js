@@ -38,13 +38,6 @@ async function realizarReserva(req, res) {
 
 async function checarStatus(req, res) {
   try {
-    const statusSistema = await sistema()
-    if(statusSistema == 'aberto){
-       const responseMax = await fetch("https://servidor-production-65ab.up.railway.app/checar")
-       if (responseMax.status === 400) {
-         return
-       }
-    }
     res.send(statusSistema ? 'aberto' : 'fechado')
   } catch (error) {
     console.error("Erro ao verificar o status do sistema:", error)
