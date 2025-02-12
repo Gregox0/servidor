@@ -16,8 +16,8 @@ async function sistema(){
       console.error('Erro ao limpar reservas:', error)
     }
   }else{
-    return false
     check = false
+    return false
   }
 }
 
