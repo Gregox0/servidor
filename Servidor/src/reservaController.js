@@ -39,7 +39,7 @@ async function realizarReserva(req, res) {
 async function checarStatus(req, res) {
   try {
     const statusSistema = await sistema()
-    if(statusSistema == 'aberto'{
+    if(statusSistema == 'aberto') {
       const numeroDeReservas = await contarReservas()
       if (numeroDeReservas >= 10) {
         return 
