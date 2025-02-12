@@ -11,7 +11,7 @@ async function sistema(){
         await limparReservas()
       }
       check = true
-      return true
+      return false
     } catch (error) {
       console.error('Erro ao limpar reservas:', error)
     }
