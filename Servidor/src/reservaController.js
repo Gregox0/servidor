@@ -38,6 +38,7 @@ async function realizarReserva(req, res) {
 
 async function checarStatus(req, res) {
   try {
+    const statusSistema = await sistema()
     res.send(statusSistema ? 'aberto' : 'fechado')
   } catch (error) {
     console.error("Erro ao verificar o status do sistema:", error)
