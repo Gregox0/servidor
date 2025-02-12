@@ -42,7 +42,7 @@ async function checarStatus(req, res) {
     if(statusSistema == 'aberto') {
       const numeroDeReservas = await contarReservas()
       if (numeroDeReservas >= 10) {
-        return 
+        return 'max'
       }
     }
     res.send(statusSistema ? 'aberto' : 'fechado')
