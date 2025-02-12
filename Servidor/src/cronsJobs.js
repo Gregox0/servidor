@@ -3,7 +3,7 @@ import { limparReservas } from './reservaService.js'
 async function sistema(){
   const agora = new Date()
   const horas = agora.getHours() - 3
-  const check = false
+  let check = false
 
   if(horas >= 17 || horas < 14){
     try {
