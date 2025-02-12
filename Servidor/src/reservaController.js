@@ -37,11 +37,6 @@ async function realizarReserva(req, res) {
 }
 
 async function checarStatus(req, res) {
-  const responseMax = await fetch("https://servidor-production-65ab.up.railway.app/checar");
-    
-    if (responseMax.status === 400) {
-      return;
-  }
   try {
     const statusSistema = await sistema()
     res.send(statusSistema ? 'aberto' : 'fechado')
