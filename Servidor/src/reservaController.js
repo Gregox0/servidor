@@ -41,11 +41,13 @@ async function checarStatus(req, res) {
     const statusSistema = await sistema()
     const numeroDeReservas = await contarReservas()
 
-    if (statusSistema == 'aberto' && numeroDeReservas >= 10) {
-      return res.send('max')
+    if (statusSistema == true && numeroDeReservas >= 10) {
+      res.send('max')
+    } else {
+      res.send(statusSistema ? 'aberto' : 'fechado')
     }
 
-    res.send(statusSistema ? 'aberto' : 'fechado')
+    
   } catch (error) {
     console.error("Erro ao verificar o status do sistema:", error)
     res.status(500).send("Erro ao verificar o status do sistema")
