@@ -4,7 +4,7 @@ async function sistema(){
   const agora = new Date()
   const horas = agora.getHours() - 3
 
-  if(horas >= 17 || horas < 11){
+  if(horas >= 17 || horas < 9){
     try {
       return true
     } catch (error) {
